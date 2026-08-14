@@ -47,12 +47,11 @@ body {
   justify-content: center;
   align-items: center;
   min-block-size: 100vh;
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
   background-color: var(--background-color);
 }
 
 main {
-  margin-block-start: clamp(1.4375rem, 0.6230rem + 3.4742vw, 3.75rem);
   flex: 1 1 0;
   min-inline-size: 350px;
   max-inline-size: 1175px;
@@ -64,7 +63,8 @@ main {
   justify-content: center;
   align-items: center;
   color: var(--Grey-400);
-  padding-block-start: clamp(1.9375rem, 1.7392rem + 0.8451vw, 2.5rem);
+  padding-block-start: clamp(3.375rem, 2.3621rem + 4.3192vw, 6.25rem);
+  padding-block-end: clamp(3.375rem, 1.2623rem + 9.0141vw, 9.375rem);
   padding-inline: 2rem;
   text-align: center;
 }
