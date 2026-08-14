@@ -1,0 +1,163 @@
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --Grey-500: hsl(234, 12%, 34%);
+  --Grey-400: hsl(212, 6%, 44%);
+  --White: hsl(0, 0%, 100%);
+  --background-color: hsl(from var(--Grey-400) h s l / 0.03);
+  --box-shadow: hsl(from var(--Grey-500) h s l / 0.2);
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* poppins-200 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 200;
+  src: url('./fonts/poppins-v24-latin-200.woff2') format('woff2');
+}
+/* poppins-regular - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/poppins-v24-latin-regular.woff2') format('woff2'); 
+}
+/* poppins-600 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./fonts/poppins-v24-latin-600.woff2') format('woff2'); 
+}
+
+body {
+  font-size: 0.9375rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-block-size: 100vh;
+  font-family: 'Poppins';
+  background-color: var(--background-color);
+}
+
+main {
+  margin-block-start: clamp(1.4375rem, 0.6230rem + 3.4742vw, 3.75rem);
+  flex: 1 1 0;
+  min-inline-size: 350px;
+  max-inline-size: 1175px;
+}
+
+.ai-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--Grey-400);
+  padding-block-start: clamp(1.9375rem, 1.7392rem + 0.8451vw, 2.5rem);
+  padding-inline: 2rem;
+  text-align: center;
+}
+
+header {
+  max-width: 34.375rem;
+  margin-block-end: clamp(3.8125rem, 3.5484rem + 1.1268vw, 4.5625rem);
+}
+
+.header-intro, h1 {
+  font-size: clamp(1.525rem, 1.25845rem + 1.13709vw, 2.28125rem);
+}
+
+.header-intro {
+  font-weight: 200;
+  margin-block-end: clamp(-0.3125rem, -0.1435rem - 0.1878vw, -0.1875rem);
+}
+
+h1, h2 {
+  color: var(--Grey-500);
+}
+
+h1 {
+  font-weight: 700;
+  margin-block-end: 0.875rem;
+}
+
+.header-description {
+  line-height: 1.3125rem;
+  letter-spacing: 0.1px;
+  color: var(--Grey-500);
+}
+
+.flexbox-container, .col-two {
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexbox-container {
+  text-align: start;
+}
+
+.col-one, .col-two, .col-three {
+  flex: 1 1 0;
+}
+
+section {
+  background-color: var(--White);
+  box-shadow: 0 10px 15px var(--box-shadow);
+  border-radius: 0.625rem;
+  padding-inline: 1.9375rem;
+  padding-block-start: 1.6875rem;
+  padding-block-end: 2.9375rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.supervisor-section {
+  border-block-start: 4.5px solid var(--Cyan);
+}
+
+.team-builder-section {
+  border-block-start: 4.5px solid var(--Red);
+}
+
+.karma-section {
+  border-block-start: 4.5px solid var(--Orange);
+}
+
+.calculator-section {
+  border-block-start: 4.5px solid var(--Blue);
+}
+
+.section-heading {
+  font-size: 1.25rem;
+  margin-block-end: 0.3125rem;
+}
+
+.section-para {
+  font-size: 0.825rem;
+  margin-block-end: 2rem;
+}
+
+.section-img {
+  inline-size: 4.0625rem;
+  align-self: self-end;
+}
+
+@media screen and (width >= 600px) {
+  .flexbox-container {
+    flex-direction: row;
+  }
+}
