@@ -8,6 +8,11 @@
   --White: hsl(0, 0%, 100%);
   --background-color: hsl(from var(--Grey-400) h s l / 0.03);
   --box-shadow: hsl(from var(--Grey-500) h s l / 0.2);
+  --flex-gap: 2rem;
+}
+
+html {
+  /* scrollbar-gutter: stable */
 }
 
 *, *::after, *::before {
@@ -46,13 +51,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-block-size: 100vh;
   font-family: 'Poppins', sans-serif;
   background-color: var(--background-color);
 }
 
 main {
-  flex: 1 1 0;
   min-inline-size: 350px;
   max-inline-size: 1175px;
 }
@@ -99,7 +102,7 @@ h1 {
 }
 
 .flexbox-container, .col-two {
-  gap: 2rem;
+  gap: var(--flex-gap);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -111,10 +114,11 @@ h1 {
 }
 
 .col-one, .col-two, .col-three {
-  flex: 1 1 0;
+  inline-size: 100%;
 }
 
 section {
+  inline-size: 100%;
   background-color: var(--White);
   box-shadow: 0 10px 15px var(--box-shadow);
   border-radius: 0.625rem;
@@ -156,8 +160,12 @@ section {
   align-self: self-end;
 }
 
-@media screen and (width >= 600px) {
+@media screen and (width >= 700px) {
   .flexbox-container {
     flex-direction: row;
+  }
+
+  .col-one, .col-two, .col-three {
+    inline-size: calc((100% - (2 * var(--flex-gap))) / 3);
   }
 }
