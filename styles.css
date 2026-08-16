@@ -11,10 +11,6 @@
   --flex-gap: 2rem;
 }
 
-html {
-  /* scrollbar-gutter: stable */
-}
-
 *, *::after, *::before {
   box-sizing: border-box;
   margin: 0;
