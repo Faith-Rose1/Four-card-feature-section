@@ -52,8 +52,8 @@ body {
 }
 
 main {
-  min-inline-size: 350px;
-  max-inline-size: 1175px;
+  min-inline-size: 21.875rem;
+  max-inline-size: 73.4375rem;
 }
 
 .ai-container {
@@ -93,7 +93,7 @@ h1 {
 
 .header-description {
   line-height: 1.3125rem;
-  letter-spacing: 0.1px;
+  letter-spacing: 0.00625rem;
   color: var(--Grey-500);
 }
 
